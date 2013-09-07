@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = AccessibleHash::VERSION
   spec.authors       = ["JC Wilcox"]
   spec.email         = ["84jwilcox@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Adds ability to access hash elements with custom method calls.}
+  spec.summary       = %q{Adds attr_accessor-esque methods to hash attributes.}
   spec.homepage      = ""
   spec.license       = "MIT"
 

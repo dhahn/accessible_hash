@@ -1,6 +1,6 @@
 # AccessibleHash
 
-TODO: Write a gem description
+Adds ability to access hash elements with custom method calls.
 
 ## Installation
 
@@ -18,7 +18,33 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Call the make_accessible method either on the Hash class:
+
+  Hash.make_accessible
+
+or on a hash object
+
+  a = {}
+  a.make_accessible
+
+to gain access to data members by methods who's names correspond to the keys.
+For example:
+
+  a.foo = "bar"
+
+is equivalent to
+
+  a[:foo] = "bar"
+
+Similarly,
+
+  a.foo
+
+is equivalent to
+
+  a[:foo]
+
+Using the class level method adds this functionality to all Hashes, whereas using the instance method adds the functionality only to the hash it is called on.
 
 ## Contributing
 
