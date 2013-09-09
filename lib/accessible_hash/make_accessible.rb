@@ -10,6 +10,7 @@ module AccessibleHash
           super(method_name, *args)
         end
       end
+      self
     end
 
     def self.make_accessible

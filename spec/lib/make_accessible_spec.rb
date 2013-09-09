@@ -10,6 +10,10 @@ describe Hash do
     describe "make_accessible" do
       describe "used as an instance method" do
         before(:each) { the_hash.make_accessible }
+        it "should return the original hash" do
+          the_hash.make_accessible.should be the_hash
+        end
+
         it "should mimic setters" do
           the_hash.should_not respond_to :foo=
           expect { the_hash.foo = "bar" }.not_to raise_exception
