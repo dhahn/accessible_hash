@@ -18,33 +18,43 @@ Or install it yourself as:
 
 ## Usage
 
+###### Ruby 1.9.3
+
 Call the make_accessible method either on the Hash class:
 
-  Hash.make_accessible
+    Hash.make_accessible
 
 or on a hash object
 
-  a = {}
-  a.make_accessible
+    a = {}
+    a.make_accessible
 
 to gain access to data members by methods who's names correspond to the keys.
 For example:
 
-  a.foo = "bar"
+    a.foo = "bar"
 
 is equivalent to
 
-  a[:foo] = "bar"
+    a[:foo] = "bar"
 
 Similarly,
 
-  a.foo
+    a.foo
 
 is equivalent to
 
-  a[:foo]
+    a[:foo]
 
 Using the class level method adds this functionality to all Hashes, whereas using the instance method adds the functionality only to the hash it is called on.
+
+###### Ruby 2.0
+
+If you are using Ruby 2, simply call
+
+    using AccessibleHash
+    
+This will give you the same getter/setter functionality as above for all code following the using call until the end of that file.
 
 ## Contributing
 
